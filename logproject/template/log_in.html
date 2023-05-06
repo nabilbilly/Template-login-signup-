@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'logs.css' %}">
+    <title>log in</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar_brand">
+            <img src="images/109-map-location.png" alt="" width="40px" height="40px">
+           <h2><span>Treasure Hunt</span> </h2><br><br><br>
+        </div>
+         <div class="sidebar_manu">
+            <span>
+               <h3>Good afternoon,<span style="font-size: 18px;font-weight: lighter;">  welcome back!<br>Please Log in to access the game.</span></h3>   <br><br>
+            </span>   
+         </div>
+         <div class="forms">
+            <form action="" method="post">
+             <label for="">Group Name</label><br><br>
+             <input id="group_name" type="text" placeholder="@Treasurehunt" >  <br><br>
+
+             <label for="">Password</label>      <br><br>
+             <input id="group_name" type="password" placeholder="***********"> <br><br>
+              
+             <div class="fk-bar">
+             <span><a href=""><h5> Create an Account!</h5>  </a></span>
+             <span><a href=""><h6>Forgoten password?</h6>  </a></span>
+             </div>
+             <br>
+              <input type="submit" name="submit" id="login" value="Login" >
+            </form>
+         </div>
+       
+   </div>
+   <div class=" main-content">
+       <header>
+          <img src={% static "./image/103-gym-time.png" %} alt="" width="100%" height="647vh">
+      </header>
+   
+    </div>
+
+    
+</body>
+</html>

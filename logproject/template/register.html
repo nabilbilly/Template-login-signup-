@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href={% static "./stylesheets/reg.css" %}>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href={% static "./resources/Logo_Worldskills_Ghana.png" %} type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <main>
+        {% for message in messages %}
+        <p style="color: black; font-weight: 700; font-size: 15px;">{{message}}</p>
+        {% endfor %}
+       <form method="post">
+        {% csrf_token %}
+        <img src={% static "./resources/Logo_Worldskills_Ghana.png" %} alt="logo">
+        <h1>REGISTER</h1>
+        <input type="text" placeholder="First Name" name="fname"><br>
+        <input type="text" placeholder="Surname" name="lname"><br>
+        <input type="radio" value="M" name="gender">
+        <label for="gender">Male</label>
+        <input type="radio" value="F" name="gender">
+        <label for="gender">Female</label><br>
+        <input type="text" placeholder="Birth Town" name="btown"><br>
+        <input type="date" placeholder="Birth Date" name="bday"><br>
+        <input type="text" placeholder="Home Town" name="htown"><br>
+        <input type="text" placeholder="Street" name="street"><br>
+        <input type="text" placeholder="Class" name="class"><br>
+        <!-- <input type="text" placeholder="Position" name="position"><br> -->
+        <input type="password" placeholder="Password" name="password" required><br>
+        <input type="password" placeholder="confirm password" name="cpassword" required><br>
+        <input type="submit" value="Submit">
+
+        <div class="link">
+            <p>Have an account?  <a href="/"> login</a></p>
+        </div>
+       </form>
+    </main>
+</body>
+</html>
